@@ -1,0 +1,43 @@
+# containers com o MongoDB e o mongo-express (interface de adminstração do MongoDB via Web)
+version: '3'
+
+services:
+    # instância do MongoDB a ser criada para acesso na porta 27017
+    mongo:
+        image: mongo
+        # variáveis de ambiente
+        environment:
+            # login e senha para acesso à instância do MongoDB
+            MONGO_INITDB_ROOT_USERNAME: admin
+            MONGO_INITDB_ROOT_PASSWORD: admin
+        # Porta do host : porta dentro do container
+        ports:
+            - 27017:27017
+        volumes:
+            - ./app:/data/db
+        networks:
+            - mongo-network
+
+    # instância a ser criada que permitirá a execução da aplicação Web para administração da instância do MongoDB para acesso na porta 8081
+    mongo-express:
+        image: mongo-express
+        environment:
+            # login senha de acesso ao mongo-express
+            ME_CONFIG_BASICAUTH_USERNAME: root
+            ME_CONFIG_BASICAUTH_PASSWORD: root
+            # configurações de acesso para que o mongo-express acesse a instância do MongoDB
+            ME_CONFIG_MONGODB_PORT: 27017
+            ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+            ME_CONFIG_MONGODB_ADMINPASSWORD: admin
+        ports:
+            - 8081:8081
+        # ligação deste container com o serviço mongo
+        links:
+            - mongo
+        networks:
+            - mongo-network
+
+# network mongo-network que cria a comunicação entre os containers mongo e mongo-express
+networks: 
+    mongo-network:
+        driver: bridge

@@ -1,0 +1,7 @@
+version: '3.3'
+services:
+    python-client:
+        image: 'python:3'
+        container_name: python
+        volumes: 
+            - ./app:/usr/src/app
