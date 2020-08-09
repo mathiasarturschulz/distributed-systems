@@ -7,7 +7,7 @@ connection = MongoClient('localhost', 27017, username='admin', password='admin',
 databaseEmpresa = connection.empresa
 collectionUsuarios = databaseEmpresa.collectionUsuarios
 
-musica = {
+usuario = {
     'nome': 'Mathias Artur Schulz',
     'cargo': 'Chefão kkk',
     'email': 'MathiasSchulz34@gmail.com',
@@ -15,5 +15,5 @@ musica = {
     'dataCriacaoRegistro': datetime.datetime.now(),
 }
 
-musica_id = collectionUsuarios.insert_one(musica).inserted_id
-print(musica_id)
+usuario_id = collectionUsuarios.insert_one(usuario).inserted_id
+print(usuario_id)
