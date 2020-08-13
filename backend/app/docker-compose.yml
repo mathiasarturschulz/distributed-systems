@@ -1,0 +1,15 @@
+# version: '3.3'
+# services:
+#     python-client:
+#         build: .
+#         ports:
+#             - '5000:5000'
+
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+     - "5000:5000"
+  redis:
+    image: "redis:alpine"
