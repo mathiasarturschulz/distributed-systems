@@ -12,6 +12,10 @@ def getOne(id):
 def insertOne():
     return 'rota de inserção de um registro'
 
+@routes.route('/pessoas/<id>', methods=['POST'])
+def updateOne():
+    return 'rota de atualização de um registro'
+
 @routes.route('/pessoas/<id>', methods=['DELETE'])
 def deleteOne(id):
     return 'rota de exclução do registro ' + id
