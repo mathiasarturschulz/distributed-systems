@@ -1,0 +1,4 @@
+db/app
+backend/app/__pycache__
+backend/app/controllers/__pycache__
+backend/app/routes/__pycache__

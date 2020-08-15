@@ -16,6 +16,7 @@ services:
         volumes:
             - ./app:/data/db
 
+
     # instância a ser criada que permitirá a execução da aplicação Web para administração da instância do MongoDB para acesso na porta 8081
     mongo-express:
         image: mongo-express
