@@ -15,7 +15,8 @@ services:
             - 27017:27017
         volumes:
             - ./app:/data/db
-
+        networks:
+            - mongo-network
 
     # instância a ser criada que permitirá a execução da aplicação Web para administração da instância do MongoDB para acesso na porta 8081
     mongo-express:
@@ -30,6 +31,8 @@ services:
             ME_CONFIG_MONGODB_ADMINPASSWORD: admin
         ports:
             - 8081:8081
+        networks:
+            - mongo-network
 
 networks:
   default:
