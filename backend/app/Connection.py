@@ -7,10 +7,13 @@ class Connection:
 
     connection = None
 
+    def __init__(self):
+        self.collection = self.startConnection()
+
     def startConnection(self):
-        if not connection:
-            connection = MongoClient('localhost', 27017, username=self.USERNAME, password=self.PASSWORD)
-        return connection
+        if not self.connection:
+            self.connection = MongoClient('localhost', 27017, username=self.USERNAME, password=self.PASSWORD)
+        return self.connection
     
     def getCollectionByName(self, name):
         connection = self.startConnection()
