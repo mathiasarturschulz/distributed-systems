@@ -12,7 +12,7 @@ class Connection:
 
     def startConnection(self):
         if not self.connection:
-            self.connection = MongoClient('localhost', 27017, username=self.USERNAME, password=self.PASSWORD)
+            self.connection = MongoClient('db_mongo_1', 27017, username=self.USERNAME, password=self.PASSWORD)
         return self.connection
     
     def getCollectionByName(self, name):
