@@ -1,23 +1,19 @@
 # distributed-systems
 
-## MongoDB + mongo-express
+## Criando a network externa
 
-Fonte: 
+`docker network create shared`
 
-https://medium.com/@renato.groffe/mongodb-mongo-express-docker-compose-montando-rapidamente-um-ambiente-para-uso-824f25ca6957
+## Persistência
 
-### Como rodar containers docker
+### MongoDB
 
-`docker-compose up`
+E mongo-express para visualizar os dados salvos a partir do navegador http://0.0.0.0:8081/
 
-### Visualizar os dados salvos no MongoDB
+## Backend
 
-http://localhost:8081/
+### Python 3.8.5
 
-## Backend em python
+## Frontend
 
-Exemplo de comunicação com o MongoDB a partir do python
-
-Na pasta distributed-systems:
-
-`python3 backend/app/example.py`
+### React
