@@ -23,9 +23,9 @@ Criar a Network para comunicação dos containers
 Iniciando todos os três containers mongo (você deve estar na pasta principal)
 
 ```
-cd db-mongo01/ && docker-compose up -d --build
-cd ../db-mongo02/ && docker-compose up -d --build
-cd ../db-mongo03/ && docker-compose up -d --build && cd ../
+cd db-mongo01/ && sudo docker-compose up -d --build
+cd ../db-mongo02/ && sudo docker-compose up -d --build
+cd ../db-mongo03/ && sudo docker-compose up -d --build && cd ../
 ```
 
 Conectar no shell do primeiro container
@@ -41,3 +41,15 @@ Iniciando o replica set
 `rs.initiate(config)`
 
 OBS: Pressionar ENTER até aparecer PRIMARY
+
+Para compilar as classes do servidor (deixar o .jar na pasta ./phone-server-rmi)
+
+```
+javac -cp ./phone-server-rmi/mongo-java-driver-3.12.1.jar -d outputs phone-server-rmi/*.java
+```
+
+Para rodar o Registery (deixar o .jar na pasta ./outputs)
+
+```
+java -cp .:mongo-java-driver-3.12.1.jar Registery
+```
