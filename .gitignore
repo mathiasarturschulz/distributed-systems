@@ -2,3 +2,6 @@ db/app
 backend/app/__pycache__
 backend/app/controllers/__pycache__
 backend/app/routes/__pycache__
+db-mongo01/app
+db-mongo02/app
+db-mongo03/app

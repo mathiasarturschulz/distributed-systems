@@ -1,9 +1,5 @@
 # distributed-systems
 
-## Criando a network externa
-
-`docker network create shared`
-
 ## Persistência
 
 ### MongoDB

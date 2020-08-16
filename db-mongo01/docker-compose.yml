@@ -8,6 +8,18 @@ services:
             - 30001:27017
         restart: always
         entrypoint: [ '/usr/bin/mongod', '--bind_ip_all', '--replSet', 'my-mongo-set']
+        volumes:
+            - ./app:/data/db
+
+    mongo-express01:
+        image: mongo-express
+        environment:
+            ME_CONFIG_MONGODB_SERVER: mongo01
+            ME_CONFIG_MONGODB_PORT: 27017
+        ports:
+            - 8081:8081
+        depends_on:
+            - mongo01
 
 networks:
     default:
