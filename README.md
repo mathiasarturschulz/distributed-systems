@@ -24,9 +24,13 @@ Criar a Network para comunicação dos containers
 
 `docker network create my-mongo-cluster`
 
-Iniciando todos os três containers mongo
+Iniciando todos os três containers mongo (você deve estar na pasta principal)
 
-`docker-compose up`
+```
+cd db-mongo01/ && docker-compose up -d --build
+cd ../db-mongo02/ && docker-compose up -d --build
+cd ../db-mongo03/ && docker-compose up -d --build && cd ../
+```
 
 Conectar no shell do primeiro container
 
@@ -39,3 +43,5 @@ Criando o config dentro do mongo do container conectado
 Iniciando o replica set
 
 `rs.initiate(config)`
+
+OBS: Pressionar ENTER até aparecer PRIMARY

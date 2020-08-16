@@ -7,7 +7,7 @@ services:
         ports:
             - 30001:27017
         restart: always
-        entrypoint: [ '/usr/bin/mongod', '--replSet', 'my-mongo-set']
+        entrypoint: [ '/usr/bin/mongod', '--bind_ip_all', '--replSet', 'my-mongo-set']
 
 networks:
     default:
