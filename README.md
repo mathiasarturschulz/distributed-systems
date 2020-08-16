@@ -42,13 +42,15 @@ Iniciando o replica set
 
 OBS: Pressionar ENTER até aparecer PRIMARY
 
-Para compilar as classes do servidor (deixar o .jar na pasta ./phone-server-rmi)
+## Compilar e executar o servidor
+
+Para compilar as classes do servidor (deixar o .jar na pasta ./phone-server-rmi) (Na pasta app)
 
 ```
 javac -cp ./phone-server-rmi/mongo-java-driver-3.12.1.jar -d outputs phone-server-rmi/*.java
 ```
 
-Para rodar o Registery (deixar o .jar na pasta ./outputs)
+Para rodar o Registery (deixar o .jar na pasta ./outputs)  (Na pasta outputs)
 
 ```
 java -cp .:mongo-java-driver-3.12.1.jar Registery
