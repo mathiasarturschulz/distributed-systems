@@ -1,0 +1,15 @@
+version: '3'
+services:
+    mongo02:
+        hostname: mongo02
+        container_name: mongo02
+        image: mongo
+        ports:
+            - 30002:27017
+        restart: always
+        entrypoint: [ '/usr/bin/mongod', '--replSet', 'my-mongo-set']
+
+networks:
+    default:
+        external:
+            name: my-mongo-cluster

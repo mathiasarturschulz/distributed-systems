@@ -1,6 +1,7 @@
 from . import routes
 from controllers.ControllerPessoa import ControllerPessoa
 from Connection import Connection
+from flask import Flask, request, jsonify
 
 def start():
     connection = Connection()
