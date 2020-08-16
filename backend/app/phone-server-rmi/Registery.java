@@ -11,10 +11,12 @@ public class Registery {
   public static void main(String[] args) throws RemoteException, MalformedURLException {
     try{
       MongoClient mongoClient = new MongoClient("localhost", 30001);
-      MongoDatabase mongoDB = mongoClient.getDatabase("mongoContacts");  
-      PhoneBookServerImpl phoneBookServerImpl = new PhoneBookServerImpl(mongoClient, mongoDB);
+      MongoDatabase mongoDB = mongoClient.getDatabase("escola");
+
+      // Exemplo professor
+      ProfessorServerImpl professorServerImpl = new ProfessorServerImpl(mongoClient, mongoDB);
       Registry reg = LocateRegistry.createRegistry(3099);
-      reg.bind("phonebook", phoneBookServerImpl);
+      reg.bind("professor", professorServerImpl);
       System.out.println("Aguardando requisições...");
     } catch (RemoteException | AlreadyBoundException ex) {
       System.out.println(ex);
