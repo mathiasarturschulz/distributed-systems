@@ -44,10 +44,10 @@ OBS: Pressionar ENTER até aparecer PRIMARY
 
 ## Compilar e executar o servidor
 
-Para compilar as classes do servidor (deixar o .jar na pasta ./phone-server-rmi) (Na pasta app)
+Para compilar as classes do servidor (deixar o .jar na pasta ./server) (Na pasta app)
 
 ```
-javac -cp ./phone-server-rmi/mongo-java-driver-3.12.1.jar -d outputs phone-server-rmi/*.java
+javac -cp ./server/mongo-java-driver-3.12.1.jar -d outputs server/*.java
 ```
 
 Para rodar o Registery (deixar o .jar na pasta ./outputs)  (Na pasta outputs)
@@ -55,3 +55,7 @@ Para rodar o Registery (deixar o .jar na pasta ./outputs)  (Na pasta outputs)
 ```
 java -cp .:mongo-java-driver-3.12.1.jar Registery
 ```
+
+Para compilar as classes do cliente (deixar o .jar na pasta ./client) (Na pasta app)
+
+javac -cp ./client/mongo-java-driver-3.12.1.jar -d outputs client/*.java
