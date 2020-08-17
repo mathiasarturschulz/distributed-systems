@@ -55,3 +55,7 @@ Para rodar o Registery (deixar o .jar na pasta ./outputs)  (Na pasta outputs)
 ```
 java -cp .:mongo-java-driver-3.12.1.jar Registery
 ```
+
+Client
+
+javac -cp ./client/mongo-java-driver-3.12.1.jar -d outputs client/*.java
