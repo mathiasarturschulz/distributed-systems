@@ -8,5 +8,6 @@ class ProfessorClient{
     professorEntry.setTitulacao("back");
     professorEntry.setEmail("991315568");
     professorServer.insertOne(professorEntry);
+    professorServer.find().forEach(System.out::println);
   }
 }
