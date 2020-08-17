@@ -6,13 +6,13 @@ class ProfessorTESTE {
   public static void main(String[] args) throws Exception{
     ProfessorServer professorServer = (ProfessorServer) Naming.lookup("rmi://localhost:3099/professor");
 
-    // // Teste de cadastro de um professor
-    // ProfessorEntry professorEntry = new ProfessorEntry();
-    // professorEntry.setNome("Mathias Schulz 2");
-    // professorEntry.setTitulacao("Graduando 2");
-    // professorEntry.setEmail("mathias@gmail.com 2");
-    // professorServer.insertOne(professorEntry);
-    // System.out.println("Teste de cadastro de um professor! ");
+    // Teste de cadastro de um professor
+    ProfessorEntry professorEntry = new ProfessorEntry();
+    professorEntry.setNome("Mathias Schulz 2");
+    professorEntry.setTitulacao("Graduando 2");
+    professorEntry.setEmail("mathias@gmail.com 2");
+    professorServer.insertOne(professorEntry);
+    System.out.println("Teste de cadastro de um professor! ");
 
     // // Teste de alteração de um professor
     // ProfessorEntry professorEntry2 = new ProfessorEntry();
