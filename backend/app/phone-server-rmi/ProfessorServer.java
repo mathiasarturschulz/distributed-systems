@@ -10,8 +10,8 @@ import org.bson.Document;
  * @author Mathias Artur Schulz
  */
 interface ProfessorServer extends Remote {
-  public Document insertOne(ProfessorEntry entry) throws RemoteException;
-  // public Document updateOne(ProfessorEntry entry) throws RemoteException;
+  public void insertOne(ProfessorEntry entry) throws RemoteException;
+  public void updateOne(String ID, ProfessorEntry entry) throws RemoteException;
   // public Document findOne(String ID) throws RemoteException;
   // public Document find() throws RemoteException;
   // public Document deleteOne(String ID) throws RemoteException;
