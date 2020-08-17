@@ -24,12 +24,16 @@ class ProfessorTESTE {
     // System.out.println(professorServer.findOne("5f39c30f1e7c506fab7fd657"));
     // System.out.println("Teste de busca de um professor! ");
 
-    // Teste de busca de todos os professores
-    ArrayList<Document> docs = professorServer.find();
-    int n = docs.size();
-    for (int i=0; i<n; i++) {
-      System.out.println(docs.get(i));
-    }
-    System.out.println("Teste de busca de todos os professores! ");
+    // // Teste de busca de todos os professores
+    // ArrayList<Document> docs = professorServer.find();
+    // int n = docs.size();
+    // for (int i=0; i<n; i++) {
+    //   System.out.println(docs.get(i));
+    // }
+    // System.out.println("Teste de busca de todos os professores! ");
+
+    // // Teste de exclusão de um professor
+    // professorServer.deleteOne("5f39c30f1e7c506fab7fd657");
+    // System.out.println("Teste de exclusão de um professor! ");
   }
 }

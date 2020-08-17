@@ -28,7 +28,6 @@ import org.w3c.dom.css.DocumentCSS;
  */
 class ProfessorServerImpl extends UnicastRemoteObject implements ProfessorServer {
 
-  private ArrayList<ProfessorEntry> registers = new ArrayList<ProfessorEntry>();
   private MongoClient connection;
   private MongoDatabase database;
 
@@ -94,8 +93,16 @@ class ProfessorServerImpl extends UnicastRemoteObject implements ProfessorServer
       return null;
     }
   }
-
-  // public Document deleteOne(String ID) throws RemoteException;
+  
+  public void deleteOne(String ID) {
+    try {
+      this.database.getCollection("collectionProfessores").deleteOne(
+        new Document("_id", new ObjectId(ID))
+      );
+    }catch(Exception e){
+      System.out.println(e.getMessage());
+    }
+  }
 
   public MongoClient getConnection() { 
     return this.connection; 

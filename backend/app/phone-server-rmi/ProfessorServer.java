@@ -14,5 +14,5 @@ interface ProfessorServer extends Remote {
   public void updateOne(String ID, ProfessorEntry entry) throws RemoteException;
   public Document findOne(String ID) throws RemoteException;
   public ArrayList<Document> find() throws RemoteException;
-  // public Document deleteOne(String ID) throws RemoteException;
+  public void deleteOne(String ID) throws RemoteException;
 }
