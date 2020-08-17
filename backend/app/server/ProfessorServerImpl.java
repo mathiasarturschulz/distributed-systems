@@ -16,6 +16,7 @@ import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import static com.mongodb.client.model.Filters.eq;
 import org.bson.types.ObjectId;
+import org.w3c.dom.css.DocumentCSS;
 
 /**
  * Classe responsável por prover uma implementação para cada um dos
@@ -81,7 +82,19 @@ class ProfessorServerImpl extends UnicastRemoteObject implements ProfessorServer
     }
   }
 
-  // public Document find() throws RemoteException;
+  public ArrayList<Document> find() {
+    try {
+      ArrayList<Document> docs = new ArrayList<>();
+      for (Document cur : this.database.getCollection("collectionProfessores").find()) {
+        docs.add(cur);
+      }
+      return docs;
+    }catch(Exception e){
+      System.out.println(e.getMessage());
+      return null;
+    }
+  }
+
   // public Document deleteOne(String ID) throws RemoteException;
 
   public MongoClient getConnection() { 
