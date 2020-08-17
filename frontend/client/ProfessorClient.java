@@ -2,7 +2,7 @@ import java.rmi.Naming;
 import java.util.ArrayList;
 import org.bson.Document;
 
-class ProfessorTESTE {
+class ProfessorClient {
   public static void main(String[] args) throws Exception{
     ProfessorServer professorServer = (ProfessorServer) Naming.lookup("rmi://localhost:3099/professor");
 
