@@ -4,6 +4,9 @@ import java.rmi.server.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+import javax.xml.parsers.DocumentBuilder;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
@@ -48,19 +51,14 @@ class ProfessorServerImpl extends UnicastRemoteObject implements ProfessorServer
   
   public void updateOne(String ID, ProfessorEntry entry) {
     try {
-      System.out.println("updateOne");
-      System.out.println(entry.toString());
       Document document = new Document();
       if (entry.getNome() != null) {
-        System.out.println("nome ENTROU");
         document.put("nome", entry.getNome());
       }
       if (entry.getTitulacao() != null) {
-        System.out.println("titulacao ENTROU");
         document.put("titulacao", entry.getTitulacao());
       }
       if (entry.getEmail() != null) {
-        System.out.println("email ENTROU");
         document.put("email", entry.getEmail());
       }
       this.database.getCollection("collectionProfessores").updateOne(
@@ -72,7 +70,17 @@ class ProfessorServerImpl extends UnicastRemoteObject implements ProfessorServer
     }
   }
 
-  // public Document findOne(String ID) throws RemoteException;
+  public Document findOne(String ID) {
+    try {
+      return this.database.getCollection("collectionProfessores").find(
+        new Document("_id", new ObjectId(ID))
+      ).first();
+    }catch(Exception e){
+      System.out.println(e.getMessage());
+      return null;
+    }
+  }
+
   // public Document find() throws RemoteException;
   // public Document deleteOne(String ID) throws RemoteException;
 
