@@ -58,4 +58,8 @@ java -cp .:mongo-java-driver-3.12.1.jar Registery
 
 Para compilar as classes do cliente (deixar o .jar na pasta ./client) (Na pasta app)
 
-javac -cp ./client/mongo-java-driver-3.12.1.jar -d outputs client/*.java
+`javac -cp ./client/mongo-java-driver-3.12.1.jar -d outputs client/*.java`
+
+Compilar o cliente e o servidor ao mesmo tempo (Na pasta principal)
+
+`cd backend/app/ && javac -cp ./server/mongo-java-driver-3.12.1.jar -d outputs server/*.java && cd ../../ && cd frontend/ && javac -cp ./client/mongo-java-driver-3.12.1.jar -d outputs client/*.java && cd ../`
