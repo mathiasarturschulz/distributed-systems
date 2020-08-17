@@ -1,4 +1,6 @@
 import java.rmi.Naming;
+import java.util.ArrayList;
+import org.bson.Document;
 
 class ProfessorTESTE {
   public static void main(String[] args) throws Exception{
@@ -18,8 +20,16 @@ class ProfessorTESTE {
     // professorServer.updateOne("5f39c30f1e7c506fab7fd657", professorEntry2);
     // System.out.println("Teste de alteração de um professor! ");
 
-    // Teste de busca de um professor
-    System.out.println(professorServer.findOne("5f39c30f1e7c506fab7fd657"));
-    System.out.println("Teste de busca de um professor! ");
+    // // Teste de busca de um professor
+    // System.out.println(professorServer.findOne("5f39c30f1e7c506fab7fd657"));
+    // System.out.println("Teste de busca de um professor! ");
+
+    // Teste de busca de todos os professores
+    ArrayList<Document> docs = professorServer.find();
+    int n = docs.size();
+    for (int i=0; i<n; i++) {
+      System.out.println(docs.get(i));
+    }
+    System.out.println("Teste de busca de todos os professores! ");
   }
 }
