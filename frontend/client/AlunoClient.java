@@ -29,7 +29,7 @@ class AlunoClient {
     for (int i=0; i<n; i++) {
       System.out.println(docs.get(i));
     }
-    System.out.println("Teste de busca de todos os alunoes! ");
+    System.out.println("Teste de busca de todos os alunos! ");
 
     // // Teste de exclusão de um aluno
     // alunoServer.deleteOne("id");
