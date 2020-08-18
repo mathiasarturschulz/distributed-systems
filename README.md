@@ -53,12 +53,21 @@ javac -cp ./server/mongo-java-driver-3.12.1.jar -d outputs server/*.java
 Para rodar o Registery (deixar o .jar na pasta ./outputs)  (Na pasta outputs)
 
 ```
+cd backend/app/outputs/
 java -cp .:mongo-java-driver-3.12.1.jar Registery
 ```
 
 Para compilar as classes do cliente (deixar o .jar na pasta ./client) (Na pasta app)
 
 `javac -cp ./client/mongo-java-driver-3.12.1.jar -d outputs client/*.java`
+
+
+Para rodar o ProfessorClient (deixar o .jar na pasta ./outputs)  (Na pasta outputs)
+
+```
+cd frontend/outputs/
+java -cp .:mongo-java-driver-3.12.1.jar ProfessorClient
+```
 
 Compilar o cliente e o servidor ao mesmo tempo (Na pasta principal)
 
