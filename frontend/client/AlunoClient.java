@@ -8,7 +8,7 @@ class AlunoClient {
 
     // Teste de cadastro de um aluno
     AlunoEntry alunoEntry = new AlunoEntry();
-    alunoEntry.setNome("Mathias Schulz 2");
+    alunoEntry.setNome("Mathias Schulz");
     alunoEntry.setMatricula("123456789-00");
     alunoServer.insertOne(alunoEntry);
     System.out.println("Teste de cadastro de um aluno! ");
