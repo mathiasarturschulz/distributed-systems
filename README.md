@@ -63,14 +63,7 @@ javac -cp ./client/mongo-java-driver-3.12.1.jar -d outputs client/*.java
 
 Para rodar o Client (deixar o .jar na pasta ./outputs)  (Na pasta outputs)
 
-```
-java -cp .:mongo-java-driver-3.12.1.jar [nome-client]
-```
-
-<<<<<<< HEAD
-=======
 `javac -cp ./client/mongo-java-driver-3.12.1.jar -d outputs client/*.java`
-
 
 Para rodar o ProfessorClient (deixar o .jar na pasta ./outputs)  (Na pasta outputs)
 
@@ -82,4 +75,3 @@ java -cp .:mongo-java-driver-3.12.1.jar ProfessorClient
 Compilar o cliente e o servidor ao mesmo tempo (Na pasta principal)
 
 `cd backend/app/ && javac -cp ./server/mongo-java-driver-3.12.1.jar -d outputs server/*.java && cd ../../ && cd frontend/ && javac -cp ./client/mongo-java-driver-3.12.1.jar -d outputs client/*.java && cd ../`
->>>>>>> 32d8863539b0f85b1cae5e6a7569eebf735178e6
