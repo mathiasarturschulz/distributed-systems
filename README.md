@@ -44,7 +44,7 @@ OBS: Pressionar ENTER até aparecer PRIMARY
 
 ## Compilar e executar o servidor
 
-Para compilar as classes do servidor (deixar o .jar na pasta ./server) (Na pasta app)
+Para compilar as classes do servidor (deixar o .jar na pasta ./server) (Na pasta backend/app)
 
 ```
 javac -cp ./server/mongo-java-driver-3.12.1.jar -d outputs server/*.java
@@ -56,6 +56,13 @@ Para rodar o Registery (deixar o .jar na pasta ./outputs)  (Na pasta outputs)
 java -cp .:mongo-java-driver-3.12.1.jar Registery
 ```
 
-Para compilar as classes do cliente (deixar o .jar na pasta ./client) (Na pasta app)
+Para compilar as classes do cliente (deixar o .jar na pasta ./client) (Na pasta client)
 
 javac -cp ./client/mongo-java-driver-3.12.1.jar -d outputs client/*.java
+
+Para rodar o Client (deixar o .jar na pasta ./outputs)  (Na pasta outputs)
+
+```
+java -cp .:mongo-java-driver-3.12.1.jar [nome-client]
+```
+

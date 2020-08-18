@@ -15,8 +15,13 @@ public class Registery {
 
       // Exemplo professor
       ProfessorServerImpl professorServerImpl = new ProfessorServerImpl(mongoClient, mongoDB);
+      AlunoServerImpl alunoServerImpl = new AlunoServerImpl(mongoClient, mongoDB);
+      DisciplinaServerImpl disciplinaServerImpl = new DisciplinaServerImpl(mongoClient, mongoDB);
+      
       Registry reg = LocateRegistry.createRegistry(3099);
       reg.bind("professor", professorServerImpl);
+      reg.bind("aluno", alunoServerImpl);
+      reg.bind("disciplina", disciplinaServerImpl);
       System.out.println("Aguardando requisições...");
     } catch (RemoteException | AlreadyBoundException ex) {
       System.out.println(ex);
