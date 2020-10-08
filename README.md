@@ -2,20 +2,6 @@
 
 Exemplo de aplicação de sistemas distribuídos utilizando Java e MongoDB
 
-## Persistência
-
-### MongoDB
-
-E mongo-express para visualizar os dados salvos a partir do navegador http://0.0.0.0:8081/
-
-## Backend
-
-### Python 3.8.5
-
-## Frontend
-
-### React
-
 ## Replica set
 
 Criar a Network para comunicação dos containers
