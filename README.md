@@ -1,5 +1,7 @@
 # distributed-systems
 
+Exemplo de aplicação de sistemas distribuídos utilizando Java e MongoDB
+
 ## Persistência
 
 ### MongoDB
